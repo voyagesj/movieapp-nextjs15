@@ -3,7 +3,7 @@ import { API_URL } from "../app/(home)/page";
 async function getMovie(id: string) {
     console.log(`fetching movies: ${Date.now()}`);
     await new Promise((resolve) => setTimeout(resolve, 1000));
-    throw new Error("Failed to fetch movie data");
+    //throw new Error("Failed to fetch movie data");
     const res = await fetch(`${API_URL}/${id}`);
     const data = await res.json();
     return data;
